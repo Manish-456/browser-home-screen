@@ -1,0 +1,244 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Plus+Jakarta+Sans:wght@500;800&display=swap");
+/* Css Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+  height: 100vh;
+  width: 100%;
+}
+/* Greeting Header */
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.header .greeting {
+  background-color: rgba(0, 0, 0, 0.374);
+  border-bottom: 1px solid blue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 5px cyan;
+  color: rgba(255, 255, 255, 0.936);
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1.2rem;
+  padding: 1rem;
+}
+/* Video background */
+#wallpaper {
+  bottom: 0;
+  left: 0;
+  min-height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.main {
+  margin-top: 20px;
+}
+.main .container {
+  align-items: center;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 90px;
+  height: 15%;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  transform: translate(0%, 250%);
+  width: 50%;
+}
+/* Clock */
+.min,
+.hrs,
+.sec {
+  background-color: rgba(128, 128, 128, 0.322);
+  border-radius: 10px;
+  letter-spacing: 1.5px;
+  padding: 10px;
+  position: relative;
+}
+span {
+  font-size: 1.9rem;
+}
+
+.min::before,
+.hrs::before,
+.sec::before {
+  content: "min";
+  font-size: 0.9rem;
+  margin-top: 10px;
+  position: absolute;
+  text-align: center;
+  text-transform: uppercase;
+  top: 100%;
+}
+
+.min::before {
+  left: 30%;
+}
+
+.hrs::before {
+  content: "hour";
+}
+.sec::before {
+  content: "sec";
+  left: 30%;
+}
+/* Jokes  */
+.dadJokes {
+  background-color: rgba(128, 128, 128, 0.05);
+  font-size: 0.8rem;
+  justify-content: center;
+  margin-top: 150px;
+  text-align: center;
+  text-shadow: 1px 1px 5px #888;
+}
+/* Buttons */
+.buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+  padding-top: 2rem;
+}
+.dad-jokes {
+  background-color: rgba(0, 0, 0, 0.295);
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 0.9rem;
+  margin: auto;
+  padding: 2rem;
+  width: 60%;
+}
+.game {
+  margin-top: 10px;
+}
+
+
+.dadJokes-btn,
+.motivation,
+.playbtn {
+  background-color: #30197d8a;
+  border-radius: 1.4rem;
+  border: none;
+  color: white;
+  cursor: pointer;
+  font-size: 0.9rem;
+  font-weight: bold;
+  line-height: 1.9;
+  outline: none;
+  padding: 10px 20px;
+  text-transform: uppercase;
+}
+.dadJokes-btn:hover {
+  opacity: 0.8;
+}
+.game .playbtn {
+  background-color: rgba(77, 228, 7, 0.304);
+  font-size: inherit;
+  padding: 10px 20px;
+}
+
+.game .playbtn:hover {
+  opacity: 0.8;
+}
+
+.motivation {
+  background-color: #006f8053;
+}
+.motivation:hover {
+  opacity: 0.8;
+}
+
+.author {
+  text-align: end;
+  margin-bottom: 10px;
+}
+
+.quotes {
+  align-items: center;
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+}
+
+/* Footer */
+.links {
+  align-items: center;
+  background-color: rgba(128, 128, 128, 0.087);
+  bottom: 10px;
+  display: flex;
+  gap: 3rem;
+  justify-content: center;
+  padding: 10px;
+  position: fixed;
+  width: 100%;
+}
+.fa-brands {
+  font-size: 1.8rem;
+}
+.fa-facebook {
+  background-color: blue;
+  border-radius: 50%;
+  color: white;
+}
+.fa-google {
+  color: white;
+}
+
+.fa-github {
+  color: white;
+}
+
+.meridiem {
+  font-size: 0.89rem;
+}
+
+
+/* Media query */
+@media (max-width: 768px) {
+  .dad-jokes {
+    font-size: 0.9rem;
+    padding: 1.2rem;
+    width: 100%;
+  }
+  .min,
+  .sec,
+  .hrs,
+  span {
+    font-size: 1rem;
+  }
+
+  .dadJokes-btn,
+  .motivation {
+    font-size: 0.75rem;
+  }
+  .meridiem {
+    font-size: 0.8rem;
+  }
+  .fa-brands {
+    font-size: 1.4rem;
+  }
+
+  .min::before,
+  .hrs::before,
+  .sec::before {
+    font-size: 0.6rem;
+  }
+  .header .greeting {
+    font-size: 0.9rem;
+  }
+}
