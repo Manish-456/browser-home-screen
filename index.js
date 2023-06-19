@@ -1,4 +1,4 @@
-import {API_KEY} from './config.js';
+
 const min = document.querySelector(".min");
 
 const hrs = document.querySelector(".hrs");
@@ -33,34 +33,14 @@ async function getDaddyJokes(){
         }
     });
     const jokes = await res.json();
-    const author = document.querySelector(".author")
+
     quoteBox.style.display = "flex";
-    author.textContent = "";
+
     const dadJokes = document.querySelector(".dad-jokes");
     dadJokes.innerHTML = jokes.joke
 }
-const dadJokeInit = document.querySelector(".dadJokes-btn");
-dadJokeInit.addEventListener('click', getDaddyJokes)
 
-async function getMotivationalQuotes() {
-    const res = await fetch("https://api.api-ninjas.com/v1/quotes", {
-        method : "GET",
-        headers : {
-            'X-Api-Key' : API_KEY,
-            'Content-Type' : "application/json"
-        }
-    });
-
-    const quotes = await res.json();
-    const quotesLine =document.getElementById("quotes");
-    const author = document.querySelector('.author');
-    quoteBox.style.display = "flex";
-    quotesLine.textContent = quotes[0].quote;
-    author.textContent ="- " + quotes[0].author
+getDaddyJokes();
 
 
-    
-}
-const motivation = document.querySelector(".motivation");
-motivation.addEventListener('click', getMotivationalQuotes)
 
